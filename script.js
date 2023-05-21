@@ -75,8 +75,48 @@ var imgAddress=[
           }
         },334)
        }
-      //previous
-      if (whichOne==='previous') {
-       
-      }
+        //previous
+    if (whichOne==='previous') {
+      img1.parentElement.parentElement.style.transform='translateX(100%)'
+      img1.parentElement.parentElement.style.transition='all 0.3s linear'
+      img2.parentElement.parentElement.style.transform='translateX(100%)'
+      img2.parentElement.parentElement.style.transition='all 0.3s linear'
+      img3.parentElement.parentElement.style.transform='translateX(100%)'
+      img3.parentElement.parentElement.style.transition='all 0.3s linear'
+      img4.parentElement.parentElement.style.transform='translateX(100%)'
+      img4.parentElement.parentElement.style.transition='all 0.3s linear'
+      img5.parentElement.parentElement.style.transform='translateX(100%)'
+      img5.parentElement.parentElement.style.transition='all 0.3s linear'
+      img6.parentElement.parentElement.style.transform='translateX(100%)'
+      img6.parentElement.parentElement.style.transition='all 0.3s linear'
+      img7.parentElement.parentElement.style.transform='translateX(100%)'
+      img7.parentElement.parentElement.style.transition='all 0.3s linear'
+      setTimeout(function (){
+        img1.parentElement.parentElement.style.transform='translateX(0)'
+        img1.parentElement.parentElement.style.transition='all 0s linear'
+        img2.parentElement.parentElement.style.transform='translateX(0)'
+        img2.parentElement.parentElement.style.transition='all 0s linear'
+        img3.parentElement.parentElement.style.transform='translateX(0)'
+        img3.parentElement.parentElement.style.transition='all 0s linear'
+        img4.parentElement.parentElement.style.transform='translateX(0)'
+        img4.parentElement.parentElement.style.transition='all 0s linear'
+        img5.parentElement.parentElement.style.transform='translateX(0)'
+        img5.parentElement.parentElement.style.transition='all 0s linear'
+        img6.parentElement.parentElement.style.transform='translateX(0)'
+        img6.parentElement.parentElement.style.transition='all 0s linear'
+        img7.parentElement.parentElement.style.transform='translateX(0)'
+        img7.parentElement.parentElement.style.transition='all 0s linear'
+        img7.src=img6.src;
+        img6.src=img5.src;
+        img5.src=img4.src;
+        img4.src=img3.src;
+        img3.src=img2.src;
+        img2.src=img1.src;
+        if (imgAddress.indexOf(img1.src)===0) {
+          img1.src=imgAddress[imgAddress.length-1];
+        }else{
+          img1.src=imgAddress[imgAddress.indexOf(img1.src)-1]
+        }
+      },334)
+    }
   }
